@@ -16,6 +16,7 @@ provider "google" {
 resource "google_storage_bucket" "simple" {
   name     = var.bucket_name
   location = "EU"
+  force_destroy = true
   versioning {
     enabled = true
   }
