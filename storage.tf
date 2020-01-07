@@ -16,4 +16,7 @@ provider "google" {
 resource "google_storage_bucket" "simple" {
   name     = var.bucket_name
   location = "EU"
+  versioning {
+    enabled = true
+  }
 }
